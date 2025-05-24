@@ -1,0 +1,10 @@
+Table Events {
+  id int pk
+  image image
+  schedule datetime
+  name char
+  content char
+  created_at datetime
+  updated_at datetime
+  status bool
+}

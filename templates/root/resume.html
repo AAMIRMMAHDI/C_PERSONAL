@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block 'content' %}
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h2>Resume</h2>
+              <div class="container section-title" data-aos="fade-up">
+                <h2></h2>
+            </div>
+              <p class="mb-0">Specifications of each project.</p>
+          </div>
+        </div>
+      </div>
+     
+    </div><!-- End Page Title -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <div class="container">
+
+        <div class="row">
+          {% for resume in resumes %}
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">{{resume.NAME}}</h3>
+            <div class="resume-item">
+              <h4>{{resume.TITLE}}</h4>
+              <p><em>{{resume.SUBJECT}}</em></p>
+              <ul>
+                <li>{{resume.FIRST_TEXT}}</li>
+                <li>{{resume.SECOND_TEXT}}</li>
+                <li>{{resume.THIRD_TEXT}}</li>
+                <li>{{resume.DESCRIPTION}}</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+  </main>
+  {% endblock 'content' %}
